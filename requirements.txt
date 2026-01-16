@@ -1,0 +1,11 @@
+
+cmd2
+boto3 
+botocore 
+rich 
+azure-identity 
+azure-mgmt-resource 
+google-cloud-resource-manager
+google-cloud-compute 
+google-auth
+openai

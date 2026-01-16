@@ -1,0 +1,114 @@
+final year project 
+
+Below are all the commands your CSPM Shell supports, with explanation.
+
+✅ 1. Run a Cloud Scan
+
+This is your first major command.
+
+scan
+
+
+This will run:
+
+EC2 scan
+
+S3 scan
+
+Security Groups scan
+
+Any other AWS resource scan your scanner handles
+
+Output will appear in the terminal.
+
+✅ 2. Run AI-Based AWS Security Analysis
+
+If you want the AI-generated security report (LLM-powered):
+
+analyze
+
+
+Add --save if you want it saved to a file:
+
+analyze --save
+
+
+This uses:
+
+analyze_aws
+
+Your local Mistral GGUF model
+
+Generates a structured security report
+
+✅ 3. Ask the LLM Questions
+
+To talk to your local AI model:
+
+ai <question>
+
+
+Example:
+
+ai summarize my aws risks
+
+
+or
+
+ai what are common misconfigurations
+
+✅ 4. AI Analyze (Generic Multi-Provider)
+
+More detailed AI review of your AWS resources:
+
+ai_analyze
+
+
+or
+
+ai_analyze aws
+
+
+This gathers:
+
+S3 bucket count
+
+Bucket names
+
+Security groups
+
+SGs open to 0.0.0.0/0
+
+And other lightweight findings
+
+Then your Mistral model generates a structured JSON report.
+
+🚀 Recommended Workflow (Step-by-Step)
+🔹 Step 1: Connect (already done)
+connect
+
+🔹 Step 2: Scan AWS
+scan
+
+🔹 Step 3: Run AI analysis
+analyze
+
+
+or:
+
+analyze --save
+
+🔹 Step 4: Ask AI any question (optional)
+ai how many buckets do I have
+
+🔹 Step 5: More detailed AI report
+ai_analyze
+
+🎯 If you want the tool to automatically check for:
+
+✔ Public S3 buckets
+✔ Open ports in SGs
+✔ IAM privilege escalation
+✔ RDS exposure
+✔ EKS issues
+✔ CloudTrail misconfigurations

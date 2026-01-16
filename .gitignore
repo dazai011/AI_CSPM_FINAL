@@ -1,0 +1,37 @@
+# -------- Python --------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# -------- Virtual Environment --------
+venv/
+.env/
+
+# -------- LLM / AI Models (VERY IMPORTANT) --------
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.pth
+models/
+ai/model/*.gguf
+ai/model/*.bin
+
+# Specifically ignore your local LLM file
+ai/model/mistral-7b-instruct-v0.3-q4_k_m.gguf
+
+# -------- Cache & Temp --------
+.cache/
+.tmp/
+
+# -------- VS Code --------
+.vscode/
+!.vscode/settings.json
+
+# -------- OS --------
+.DS_Store
+Thumbs.db
+
+# -------- Logs --------
+*.log
